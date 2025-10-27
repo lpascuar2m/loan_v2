@@ -1,4 +1,5 @@
 import { Page, Locator } from "@playwright/test";
+import { BasePage } from './base-page'
 
 export interface LoginLocators {
   usernameInput: Locator;
@@ -6,10 +7,11 @@ export interface LoginLocators {
   signinButton: Locator;
 }
 
-export class LoginPage {
+export class LoginPage extends BasePage {
   readonly loginLocators: Partial<LoginLocators>;
 
   constructor(page: Page) {
+    super(page);
     this.loginLocators = {
       usernameInput: page.getByRole("textbox", { name: "Username" }),
       passwordInput: page.getByRole("textbox", { name: "Password" }),
