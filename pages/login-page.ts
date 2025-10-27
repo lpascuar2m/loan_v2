@@ -1,10 +1,9 @@
 import { Page, Locator } from "@playwright/test";
-import { error } from "console";
 
 export interface LoginLocators {
   usernameInput: Locator;
   passwordInput: Locator;
-  loginButton: Locator;
+  signinButton: Locator;
 }
 
 export class LoginPage {
@@ -14,11 +13,15 @@ export class LoginPage {
     this.loginLocators = {
       usernameInput: page.getByRole("textbox", { name: "Username" }),
       passwordInput: page.getByRole("textbox", { name: "Password" }),
-      loginButton: page.getByRole("button", { name: "Sign In" }),
+      signinButton: page.getByRole('button', { name: 'Sign In' })
     };
   }
 
-  async login() {}
+  async login(username: string, password: string) {
+    await this.enterUsername(username);
+    await this.enterPassword(password);
+    await this.loginLocators.signinButton?.click();
+  }
 
   private async enterUsername(username: string) {
     // Validate if username field is visible
@@ -40,4 +43,6 @@ export class LoginPage {
       throw new Error(`Failed to enter password ${errorMessage}`);
     }
   }
+
+
 }
