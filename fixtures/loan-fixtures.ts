@@ -11,7 +11,7 @@ type LoanFixtures = {
   navigationPage: NavigationPage;
 };
 
-const test = base.extend<LoanFixtures>({
+export const test = base.extend<LoanFixtures>({
   basePage: async ({ page }, use) => {
     await use(new BasePage(page));
   },
