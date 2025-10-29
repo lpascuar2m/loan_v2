@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","3760","Go to google","firefox","Sun Oct 26 22:26:08 PST 2025","passed","Sun Oct 26 22:26:12 PST 2025","","example.spec.ts","",""
-"","1861","Go to google","chromium","Sun Oct 26 22:26:08 PST 2025","passed","Sun Oct 26 22:26:10 PST 2025","","example.spec.ts","",""
-"","1775","Go to google","webkit","Sun Oct 26 22:26:08 PST 2025","passed","Sun Oct 26 22:26:10 PST 2025","","example.spec.ts","",""
