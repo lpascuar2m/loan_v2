@@ -15,9 +15,9 @@ test("@feature#1786", async ({
   allure.severity(Severity.NORMAL);
 
   await expect(async () => {
-    await allure.step("Login to Loan v2", async () => {
+    await allure.step("Login to Loan v2 as Admin", async () => {
       await loginPage.gotoWebsite();
-      await loginPage.login("", "");
+      await loginPage.login("Admin");
     });
 
     await allure.step("Navigate to Account Page", async () => {
