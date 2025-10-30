@@ -18,7 +18,7 @@ test.describe("@feature#1788", () => {
 
     await allure.step('Assert that actual title is same with expected title', async () => {
         const actualTitle = await page.title();
-        const expectTitle = "Individual Retirement Account - Fund Application";
+        const expectTitle = "Loan Application";
 
         expect(actualTitle).toBe(expectTitle);
     });
