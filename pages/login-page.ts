@@ -19,9 +19,18 @@ export class LoginPage extends BasePage {
     };
   }
 
-  async login(username: string, password: string) {
-    await this.enterUsername(username);
-    await this.enterPassword(password);
+  static Role = {
+    Admin: {
+      username: process.env.ADMIN_USERNAME!,
+      password: process.env.ADMIN_PASSWORD!
+    }
+  } as const;
+
+  async login(role: keyof typeof LoginPage.Role) {
+    const credential = LoginPage.Role[role];
+
+    await this.enterUsername(credential.username);
+    await this.enterPassword(credential.password);
     await this.loginLocators.signinButton?.click();
   }
 
