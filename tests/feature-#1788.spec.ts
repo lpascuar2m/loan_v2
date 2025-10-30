@@ -6,9 +6,9 @@ test.describe("@feature#1788", () => {
 
   test("", async ({ loginPage, navigationPage, page }) => {
 
-    allure.parentSuite("Regression Suite");
-    allure.suite("Loan v2 Tests");
-    allure.subSuite("IRA Fund Application");
+    allure.parentSuite("Loan V2 Tests");
+    allure.suite("For System Testing");
+    allure.subSuite("Loan Register Report");
     allure.owner("Lenard QA");
     allure.severity(Severity.CRITICAL);
 
