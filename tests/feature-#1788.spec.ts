@@ -10,7 +10,7 @@ test.describe("@feature#1788", () => {
     allure.suite("For System Testing");
     allure.subSuite("Loan Register Report");
     allure.owner("Lenard QA");
-    allure.severity(Severity.CRITICAL);
+    allure.severity(Severity.NORMAL);
 
     await allure.step('Go to loan v2 website', async () => {
         await loginPage.gotoWebsite();
