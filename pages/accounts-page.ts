@@ -3,6 +3,7 @@ import { BasePage } from './base-page'
 
 export interface AccountPageLocators {
     company: (companyName: string) => Locator;
+    loanType: Locator;
 }
 
 export class AccountPage extends BasePage {
@@ -11,11 +12,16 @@ export class AccountPage extends BasePage {
   constructor(page: Page) {
     super(page);
     this.accountPageLocators = {
-      company: (companyName: string) => page.getByRole('link', { name: companyName })
+      company: (companyName: string) => page.getByRole('link', { name: companyName }),
+      loanType: page.getByRole('link', { name: 'Loan Types   ' }),
     };
   }
 
   async clickCompany(name: string) {
     await this.accountPageLocators.company?.(name).click()
+  }
+
+  async clickLoanTypes() {
+    await this.accountPageLocators.loanType?.click();
   }
 }
