@@ -21,8 +21,8 @@ export class LoginPage extends BasePage {
 
   static Role = {
     Admin: {
-      username: process.env.ADMIN_USERNAME!,
-      password: process.env.ADMIN_PASSWORD!
+      username: process.env.ADMIN_USER! as string,
+      password: process.env.ADMIN_PASSWORD! as string
     }
   } as const;
 
