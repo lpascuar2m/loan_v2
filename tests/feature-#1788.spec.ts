@@ -1,8 +1,16 @@
 import { test, expect } from "../fixtures/loan-fixtures";
+import { Severity } from "allure-js-commons";
 import * as allure from 'allure-js-commons';
 
 test.describe("@feature#1788", () => {
+
   test("", async ({ loginPage, navigationPage, page }) => {
+
+    allure.parentSuite("Regression Suite");
+    allure.suite("Loan v2 Tests");
+    allure.subSuite("IRA Fund Application");
+    allure.owner("Lenard QA");
+    allure.severity(Severity.CRITICAL);
 
     await allure.step('Go to loan v2 website', async () => {
         await loginPage.gotoWebsite();
