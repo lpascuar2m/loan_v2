@@ -12,7 +12,7 @@ export class BasePage {
     constructor(page: Page) {
         this.page = page;
         this.basePageLocators = {
-            url: 'https://zbsi.qa.zalamea.ph/#/login'
+            url: 'https://zbsi.loans-uat.zalamea.ph/'
         }
     }
 
