@@ -39,7 +39,6 @@ export class LoginPage extends BasePage {
       if (this.loginLocators.passwordInput?.isVisible().catch(() => false)) {
         await this.loginLocators.passwordInput.fill(password);
       }
-      throw new Error("Password input field is not visible");
     } catch (e) {
       const errorMessage = e instanceof Error ? e.message : String(e);
       throw new Error(`Failed to enter password ${errorMessage}`);
