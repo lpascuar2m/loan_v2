@@ -13,6 +13,7 @@ test("@feature#1786", async ({
   allure.subSuite("CITI Internal Loans Reports");
   allure.owner("Lenard QA");
   allure.severity(Severity.NORMAL);
+  allure.link('https://tracker.genfinity.ph/issues/1786');
 
   await expect(async () => {
     await allure.step("Login to Loan v2 as Admin", async () => {
