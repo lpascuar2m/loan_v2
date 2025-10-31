@@ -2,7 +2,7 @@ import { test, expect } from "../fixtures/loan-fixtures";
 import { Severity } from "allure-js-commons";
 import * as allure from 'allure-js-commons';
 
-test.describe("@feature#1788", () => {
+test.describe("@feature-1788", () => {
 
   test("", async ({ loginPage, navigationPage, page }) => {
 
