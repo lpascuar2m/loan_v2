@@ -1,20 +1,10 @@
 import { Page, Locator } from "@playwright/test";
 import { BasePage } from './base-page'
-
-
-export type AccountPageLocators = {
-    company: (companyName: string) => Locator;
-    loanType: Locator;
-}
-
-export type LoanLedgerLocators = {
-  loanLegder: Locator;
-}
-
-export type LoanLedgerValues = {
-  loanledger: string
-}
-
+import { 
+  AccountPageLocators, 
+  LoanLedgerLocators, 
+  LoanLedgerValues } from "../types/account-types";
+  
 export class AccountPage extends BasePage {
   
   readonly accountPageLocators: Partial<AccountPageLocators>;
